@@ -1,0 +1,12 @@
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    background: linear-gradient(135deg, #0d253f, #90cea1);
+    color: #fff;
+    padding:  5% 10%;
+    z-index: 1;
+}

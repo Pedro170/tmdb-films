@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(135deg, #0d253f, #90cea1);
+    padding: 0 .6rem;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #0d253f;
+    padding: 5px 1rem;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 0 3%;
+}
+
+
+.box-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    border-radius: .2rem;
+    border: none;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0d253f;
+    margin: .3rem;
+    padding: .9% 1.7%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover {
+    position: relative;
+    background: #0d253f;
+    color: #fff;
+}
+
+.btn.active {
+    position: relative;
+    background-color: darkorange;
+    color: #fff;
+}
+
+.btn.active::before {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '+';
+    display: block;
+    padding: 0 2px;
+    background: red;
+}
+
+.box-section {
+    position: relative;
+    top: 20px;
+    padding: .5rem 8%;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.item-card {
+    width: 100%;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .grid-card {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        border-radius: .2rem;
+        border: none;
+        background: #fff;
+        font-size: .9rem;
+        font-weight: 500;
+        color: #0d253f;
+        margin: .3rem;
+        padding: 1% 1.8%;
+        cursor: pointer;
+        transition: .2s;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .grid-card {
+        grid-template-columns: auto;
+    }
+}
